@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinClock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <p onclick="toggle_display()" id="menu">config</p>
+    <div id="settings" style="display:none">
+        <form>
+            <div class="menu_content">
+                <label for="hours">Work Hours: </label>
+                <input type="number" min="1" max="24" placeholder="0" id="hours">
+            </div>
+            <div class="menu_content">
+                <label for="pay">Hourly Pay: $</label>
+                <input type="number" min="0" step="0.01" placeholder="0.00"><br>
+            </div>
+            <button onclick="start()" type="button">Start CoinClock</button>
+        </form>
+    </div>
+    <div id="clock">
+        <h1 id="earnings">$ 0.00</h1>
+    </div>
+</body>
+</html>
